@@ -3,12 +3,12 @@ services:
     name: gtrsb
     env: python
     rootDir: .
-    buildCommand: pip install -r ver0.2/requirements.txt
-    startCommand: gunicorn --bind 0.0.0.0:$PORT --timeout 120 --workers 4 ver0.2.app:app
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT --timeout 120 --workers 4 app:app
     envVars:
       - key: FLASK_ENV
         value: production
       - key: FLASK_APP
-        value: ver0.2/app.py
+        value: app.py
       - key: PORT
         value: 10000 
