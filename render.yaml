@@ -2,7 +2,7 @@ services:
   - type: web
     name: gtrsb
     env: python
-    rootDir: .
+    rootDir: Project_GTRSB/ver0.2
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn --bind 0.0.0.0:$PORT --timeout 120 --workers 4 app:app
     envVars:
